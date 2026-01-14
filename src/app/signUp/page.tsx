@@ -1,0 +1,7 @@
+export default function SignUp() {
+  return (
+    <div>
+      <h2>signup</h2>
+    </div>
+  );
+}
