@@ -29,7 +29,7 @@ export default function PeralalLayout({
           <Link href="/seels">Seels</Link>
         </Button>
       </div>
-      <div className="flex">
+      <div className="flex gap-2 mb-2">
         {marketingSlot}
         {selsSlot}
       </div>
