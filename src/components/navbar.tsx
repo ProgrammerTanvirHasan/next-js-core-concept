@@ -66,10 +66,7 @@ const Navbar = ({
       title: "About",
       url: "/about",
     },
-    {
-      title: "Blogs",
-      url: "/blogs",
-    },
+  
     {
       title: "Contract",
       url: "/contract",
@@ -77,6 +74,14 @@ const Navbar = ({
     {
       title: "Dashboard",
       url: "/dashboard",
+    },
+    {
+      title: "Admin Dashboard",
+      url: "/admin-dashboard",
+    },
+    {
+      title: "User Dashboard",
+      url: "/user-dashboard",
     },
   ],
   auth = {

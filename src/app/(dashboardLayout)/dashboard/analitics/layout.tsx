@@ -8,7 +8,7 @@ export default function AnalyticsLayout({
 }) {
   return (
     <div>
-      <div>
+      <div className="flex gap-8">
         <Button asChild>
           <Link href="/dashboard/analitics/weekly">Weekly</Link>
         </Button>
