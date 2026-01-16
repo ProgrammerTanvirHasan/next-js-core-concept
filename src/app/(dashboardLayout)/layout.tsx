@@ -7,6 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { ModeToggle } from "@/components/ui/MoodToggole";
 import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
@@ -42,7 +43,11 @@ export default function DahoardLayout({
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+          <div className="ml-auto">
+            <ModeToggle />
+          </div>
         </header>
+
         <div className="flex flex-1 flex-col gap-4 p-4">{children}</div>
       </SidebarInset>
     </SidebarProvider>
