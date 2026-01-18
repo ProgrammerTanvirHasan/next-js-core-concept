@@ -15,6 +15,7 @@ import { Route } from "@/types";
 import { adminRoutes } from "@/routes/adminRoute";
 import { UserRoute } from "@/routes/userRoute";
 import Link from "next/link";
+import { homeRoute } from "@/routes/homeRoute";
 
 // This is sample data.
 
@@ -24,19 +25,21 @@ export function RoleSidebar({
 }: {
   user: { role: string } & React.ComponentProps<typeof Sidebar>;
 }) {
-  let routes: Route[] = [];
+  let rolesRoutes: Route[] = [];
 
   switch (user.role) {
     case "admin":
-      routes = adminRoutes;
+      rolesRoutes = adminRoutes;
       break;
     case "user":
-      routes = UserRoute;
+      rolesRoutes = UserRoute;
       break;
     default:
-      routes = [];
+      rolesRoutes = [];
       break;
   }
+
+  const routes: Route[] = [homeRoute, ...rolesRoutes];
 
   return (
     <Sidebar {...props}>
