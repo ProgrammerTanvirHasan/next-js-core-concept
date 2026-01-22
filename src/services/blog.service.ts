@@ -15,7 +15,7 @@ interface ServiceOption {
 export const blogService = {
   getBlogs: async function (params?: getBlogsParams, options?: ServiceOption) {
     try {
-      const url = new URL(`${API_URL}/posts`);
+      const url = new URL(`${env.API_URL}/post`);
       //   url.searchParams.append("key", "value"); //url er moddhe chayle dynamic kicu add korte pari
 
       if (params) {
