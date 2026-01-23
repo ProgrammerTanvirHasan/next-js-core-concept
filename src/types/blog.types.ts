@@ -3,7 +3,9 @@ export interface BlogPost {
   title: string;
   content: string;
   thumbnail?: string | null;
+  status?: string;
   tags?: string[];
+  published?: string;
   views: number;
   _count?: {
     comments: number;

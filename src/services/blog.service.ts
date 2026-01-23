@@ -44,6 +44,16 @@ export const blogService = {
       return { data: null, error: { message: "something went wrong" } };
     }
   },
+
+  getBlogById: async function (id: string) {
+    try {
+      const res = await fetch(`${env.API_URL}/post/${id}`);
+      const session = await res.json();
+      return { data: session, error: null };
+    } catch (error) {
+      return { data: null, error: { message: "something went wrong" } };
+    }
+  },
 };
 
 //ei khane muloto kaj ta hocce : jokhon amra url a dynamic params add korte chay,fetch korar shomoi jokhon dynaic params pathate chay tokhon prothome Object.entries theke params ta dhorlam then url.searchParams.append kore key,value ta url a set kore dilam r fetch er moddhe url ta pathiye dilam
