@@ -16,6 +16,7 @@ import { adminRoutes } from "@/routes/adminRoute";
 import { UserRoute } from "@/routes/userRoute";
 import Link from "next/link";
 import { homeRoute } from "@/routes/homeRoute";
+import { Roles } from "@/constraint/roles";
 
 // This is sample data.
 
@@ -28,10 +29,10 @@ export function RoleSidebar({
   let rolesRoutes: Route[] = [];
 
   switch (user.role) {
-    case "admin":
+    case Roles.admin:
       rolesRoutes = adminRoutes;
       break;
-    case "user":
+    case Roles.user:
       rolesRoutes = UserRoute;
       break;
     default:

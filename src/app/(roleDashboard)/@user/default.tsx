@@ -1,3 +1,3 @@
-export default function User() {
+export default function UserDefault() {
   return null;
 }

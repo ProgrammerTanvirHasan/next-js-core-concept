@@ -14,8 +14,10 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Roles } from "@/constraint/roles";
+import { userService } from "@/services/user.service";
 
-export default function DahoardLayout({
+export default async function DashboardLayout({
   admin,
   user,
 }: {
@@ -23,9 +25,9 @@ export default function DahoardLayout({
   admin: React.ReactNode;
   user: React.ReactNode;
 }) {
-  const userInfo = {
-    role: "user",
-  };
+  const { data } = await userService.getSession();
+
+  const userInfo = data.user;
 
   return (
     <SidebarProvider>
@@ -41,7 +43,7 @@ export default function DahoardLayout({
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
                 <BreadcrumbLink href="#">
-                  Building Your Application
+                  Building Your Application2
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="hidden md:block" />
@@ -56,7 +58,7 @@ export default function DahoardLayout({
         </header>
 
         <div className="flex flex-1 flex-col gap-4 p-4">
-          {userInfo.role === "admin" ? admin : user}
+          {userInfo.role === Roles.admin ? admin : user}
         </div>
       </SidebarInset>
     </SidebarProvider>

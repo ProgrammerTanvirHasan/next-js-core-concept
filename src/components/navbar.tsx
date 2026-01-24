@@ -77,8 +77,8 @@ const Navbar = ({
       url: "/dashboard",
     },
     {
-      title: "Admin Dashboard",
-      url: "/admin-dashboard",
+      title: "User Dashboard",
+      url: "/dashboardR",
     },
   ],
   auth = {
