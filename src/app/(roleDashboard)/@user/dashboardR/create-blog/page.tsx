@@ -1,7 +1,9 @@
+import CreateBlogFromServer from "@/components/modules/user/createblog/CreateBlogFromServer";
+
 export default function CreateBlog() {
   return (
     <div>
-      <h1> create blog </h1>
+      <CreateBlogFromServer></CreateBlogFromServer>
     </div>
   );
 }
